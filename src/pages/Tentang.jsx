@@ -1,32 +1,36 @@
 import { asramaInfo, strukturOrganisasi } from "../data";
 import SectionHeader from "../components/SectionHeader";
 import { Target, Eye, Heart } from "lucide-react";
+import Maps from "../components/maps";
 
 export default function Tentang() {
   return (
-    <div className="pt-20">
+    <div className="pt-[4.69rem]">
       {/* Header */}
-     <section className="bg-gradient-to-br from-amber-600 to-amber-800 py-20 relative overflow-hidden">
-  <div
-    className="absolute inset-0 opacity-[0.05]"
-    style={{
-      backgroundImage:
-        "linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)",
-      backgroundSize: "40px 40px",
-    }}
-  />
-  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">
-      Profil Asrama
-    </span>
-    <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">
-      Tentang Kami
-    </h1>
-    <p className="text-amber-100/80 max-w-xl mx-auto">
-      {asramaInfo.tagline}
-    </p>
-  </div>
-</section>
+      <section className="bg-gradient-to-br from-amber-600 to-amber-800 py-20 relative overflow-hidden">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/bg_home.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">
+            Profil Asrama
+          </span>
+          <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">
+            Tentang Kami
+          </h1>
+          <p className="text-amber-100/80 max-w-xl mx-auto">
+            {asramaInfo.tagline}
+          </p>
+        </div>
+      </section>
 
       {/* Sejarah */}
       <section className="py-20 bg-[#F1F5F9]">
@@ -158,6 +162,8 @@ export default function Tentang() {
           </div>
         </div>
       </section>
+
+      <Maps />
     </div>
   );
 }

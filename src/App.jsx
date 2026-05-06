@@ -22,12 +22,12 @@ export default function App() {
       <Navbar />
       <main>
         <Routes>
-          <Route path="/"           element={<Home />} />
-          <Route path="/tentang"    element={<Tentang />} />
-          <Route path="/kegiatan"   element={<Kegiatan />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/tentang" element={<Tentang />} />
+          <Route path="/kegiatan" element={<Kegiatan />} />
           <Route path="/pengumuman" element={<Pengumuman />} />
-          <Route path="/galeri"     element={<Galeri />} />
-          <Route path="/kontak"     element={<Kontak />} />
+          <Route path="/galeri" element={<Galeri />} />
+          <Route path="/kontak" element={<Kontak />} />
         </Routes>
       </main>
       <Footer />

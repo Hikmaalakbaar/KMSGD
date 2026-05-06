@@ -7,20 +7,29 @@ import { Search } from 'lucide-react'
 const kategoriList = ['Semua', 'Pengumuman', 'Kegiatan', 'Prestasi']
 
 export default function Pengumuman() {
-  const [filter, setFilter]   = useState('Semua')
-  const [search, setSearch]   = useState('')
+  const [filter, setFilter] = useState('Semua')
+  const [search, setSearch] = useState('')
 
   const filtered = berita.filter(b => {
     const matchKat = filter === 'Semua' || b.kategori === filter
     const matchSearch = b.judul.toLowerCase().includes(search.toLowerCase()) ||
-                        b.ringkasan.toLowerCase().includes(search.toLowerCase())
+      b.ringkasan.toLowerCase().includes(search.toLowerCase())
     return matchKat && matchSearch
   })
 
   return (
-    <div className="pt-20">
+    <div className="pt-[4.69rem]">
       <section className="bg-gradient-to-br from-cobalt-700 to-cobalt-900 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.05]" style={{backgroundImage:'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)',backgroundSize:'40px 40px'}} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/bg_home.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Informasi Resmi</span>
           <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">Pengumuman</h1>
@@ -47,11 +56,10 @@ export default function Pengumuman() {
                 <button
                   key={k}
                   onClick={() => setFilter(k)}
-                  className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${
-                    filter === k
-                      ? 'bg-cobalt-500 text-white shadow-md shadow-cobalt-500/25'
-                      : 'bg-white text-slate-600 hover:bg-cobalt-50 hover:text-cobalt-600 border border-slate-200'
-                  }`}
+                  className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${filter === k
+                    ? 'bg-cobalt-500 text-white shadow-md shadow-cobalt-500/25'
+                    : 'bg-white text-slate-600 hover:bg-cobalt-50 hover:text-cobalt-600 border border-slate-200'
+                    }`}
                 >
                   {k}
                 </button>

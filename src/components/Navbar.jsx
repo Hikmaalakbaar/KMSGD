@@ -32,11 +32,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 py-4 ${
-        scrolled
-          ? "bg-white/80 backdrop-blur-md shadow-md shadow-yellow-500/10"
+      className={`fixed shadow-[0_4px_10px_rgba(0,0,0,0.2)] top-0 inset-x-0 z-50 transition-all duration-300 py-2 ${scrolled
+          ? "bg-white/80 backdrop-blur-md"
           : "bg-white/95 backdrop-blur-sm"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -57,7 +56,7 @@ export default function Navbar() {
               <p className="font-display font-bold text-slate-800 text-base">
                 KMSGD
               </p>
-              <p className="text-base font-medium -mt-0.5 flex flex-col" style={{ color: "#A07C08" }}>
+              <p className="text-sm font-medium -mt-0.5 flex flex-col" style={{ color: "#A07C08" }}>
                 Keluarga Mahasiswa Sunan Gunung Djati <span className="text-xs">Jabodetabek</span>
               </p>
             </div>
@@ -70,10 +69,9 @@ export default function Navbar() {
                 to={to}
                 end={to === "/"}
                 className={({ isActive }) =>
-                  `px-4 py-2 rounded-lg text-base font-medium transition-all duration-200 ${
-                    isActive
-                      ? "text-slate-900 shadow-md shadow-yellow-500/30"
-                      : "text-slate-600 hover:text-yellow-800"
+                  `px-4 py-2 rounded-lg text-base font-medium transition-all duration-200 ${isActive
+                    ? "text-slate-900 shadow-md shadow-yellow-500/30"
+                    : "text-slate-600 hover:text-yellow-800"
                   }`
                 }
                 onMouseEnter={e => {
@@ -103,9 +101,8 @@ export default function Navbar() {
       </div>
 
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <nav className="bg-white border-t border-slate-100 px-4 py-3 space-y-1">
           {navItems.map(({ to, label, icon: Icon }) => (
@@ -115,10 +112,9 @@ export default function Navbar() {
               end={to === "/"}
               onClick={() => setOpen(false)}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all ${
-                  isActive
-                    ? "text-slate-900"
-                    : "text-slate-600 hover:text-yellow-800"
+                `flex items-center gap-3 px-4 py-3 rounded-xl text-base font-medium transition-all ${isActive
+                  ? "text-slate-900"
+                  : "text-slate-600 hover:text-yellow-800"
                 }`
               }
               style={({ isActive }) =>

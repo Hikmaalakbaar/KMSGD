@@ -3,9 +3,18 @@ import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react'
 
 export default function Kontak() {
   return (
-    <div className="pt-20">
+    <div className="pt-[4.69rem]">
       <section className="bg-gradient-to-br from-cobalt-600 to-cobalt-800 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.05]" style={{backgroundImage:'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)',backgroundSize:'40px 40px'}} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/bg_home.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Hubungi Kami</span>
           <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">Kontak</h1>
@@ -22,8 +31,8 @@ export default function Kontak() {
               <div className="space-y-5">
                 {[
                   { icon: MapPin, label: 'Alamat', value: asramaInfo.location, href: null },
-                  { icon: Mail,   label: 'Email',  value: asramaInfo.email,    href: `mailto:${asramaInfo.email}` },
-                  { icon: Phone,  label: 'WhatsApp', value: asramaInfo.whatsapp, href: `https://wa.me/${asramaInfo.whatsapp.replace(/\D/g,'')}` },
+                  { icon: Mail, label: 'Email', value: asramaInfo.email, href: `mailto:${asramaInfo.email}` },
+                  { icon: Phone, label: 'WhatsApp', value: asramaInfo.whatsapp, href: `https://wa.me/${asramaInfo.whatsapp.replace(/\D/g, '')}` },
                 ].map((c, i) => (
                   <div key={i} className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm">
                     <div className="w-11 h-11 rounded-xl bg-cobalt-50 flex items-center justify-center shrink-0">
@@ -42,7 +51,7 @@ export default function Kontak() {
               </div>
 
               <a
-                href={`https://wa.me/${asramaInfo.whatsapp.replace(/\D/g,'')}`}
+                href={`https://wa.me/${asramaInfo.whatsapp.replace(/\D/g, '')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-lg shadow-emerald-500/25 hover:-translate-y-0.5 w-full"

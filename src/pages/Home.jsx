@@ -96,7 +96,7 @@ export default function Home() {
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className="bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-5 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1"
+                  className="bg-white/10 first-letter:border border-white/15 rounded-2xl p-5 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="text-3xl mb-2">{s.icon}</div>
                   <p className="font-display font-extrabold text-white text-3xl">

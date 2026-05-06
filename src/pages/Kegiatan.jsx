@@ -4,9 +4,18 @@ import { Clock, Tag } from 'lucide-react'
 
 export default function Kegiatan() {
   return (
-    <div className="pt-20">
+    <div className="pt-[4.69rem]">
       <section className="bg-gradient-to-br from-orange-500 to-orange-700 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.05]" style={{backgroundImage:'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)',backgroundSize:'40px 40px'}} />
+                <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: "url('/bg_home.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Program Asrama</span>
           <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">Kegiatan & Program</h1>
