@@ -24,7 +24,7 @@ export default function Pengumuman() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Informasi Resmi</span>
           <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">Pengumuman</h1>
-          <p className="text-cobalt-200 max-w-xl mx-auto">Informasi, pengumuman, dan berita terbaru dari Asrama Al-Hikmah</p>
+          <p className="text-cobalt-200 max-w-xl mx-auto">Informasi, pengumuman, dan berita terbaru dari KMSGD</p>
         </div>
       </section>
 

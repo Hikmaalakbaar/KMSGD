@@ -18,7 +18,7 @@ export default function Galeri() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Dokumentasi</span>
           <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">Galeri</h1>
-          <p className="text-slate-300 max-w-xl mx-auto">Dokumentasi kegiatan dan momen berharga Asrama Al-Hikmah</p>
+          <p className="text-slate-300 max-w-xl mx-auto">Dokumentasi kegiatan dan momen berharga KMSGD</p>
         </div>
       </section>
 

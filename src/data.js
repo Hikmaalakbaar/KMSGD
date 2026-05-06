@@ -3,14 +3,14 @@
 // ============================================================
 
 export const asramaInfo = {
-  name: 'Asrama Al-Hikmah',
+  name: 'Keluarga Mahasiswa Sunan Gunung Djati',
   tagline: 'Membentuk Generasi Berilmu, Berakhlak, dan Berkarya',
   founded: '2005',
   location: 'Jl. Pesantren No. 12, Cirebon, Jawa Barat',
-  email: 'info@asrama-alhikmah.ac.id',
+  email: 'info@KMSGD.ac.id',
   whatsapp: '+62 812-3456-7890',
   description:
-    'Asrama Al-Hikmah adalah hunian resmi bagi mahasiswa dan santri yang mengedepankan nilai-nilai akademik, spiritual, dan sosial. Berdiri sejak 2005, kami telah membina ratusan generasi berprestasi.',
+    'KMSGD adalah hunian resmi bagi mahasiswa dan santri yang mengedepankan nilai-nilai akademik, spiritual, dan sosial. Berdiri sejak 2005, kami telah membina ratusan generasi berprestasi.',
 }
 
 export const berita = [
@@ -20,7 +20,7 @@ export const berita = [
     tanggal: '2025-10-05',
     kategori: 'Pengumuman',
     ringkasan:
-      'Asrama Al-Hikmah membuka pendaftaran anggota baru untuk tahun akademik 2025/2026. Pendaftaran dibuka mulai 10 Oktober hingga 31 Oktober 2025.',
+      'KMSGD membuka pendaftaran anggota baru untuk tahun akademik 2025/2026. Pendaftaran dibuka mulai 10 Oktober hingga 31 Oktober 2025.',
     gambar: '../public/bg_home.png',
     penting: true,
   },
@@ -31,7 +31,7 @@ export const berita = [
     kategori: 'Kegiatan',
     ringkasan:
       'Seminar yang menghadirkan narasumber dari berbagai universitas terkemuka, membahas peran santri dalam transformasi digital bangsa.',
-    gambar: '/bg_home.jpeg',
+    gambar: '../public/bg_home.png',
     penting: false,
   },
   {
@@ -40,8 +40,8 @@ export const berita = [
     tanggal: '2025-09-15',
     kategori: 'Prestasi',
     ringkasan:
-      'Tim debat Asrama Al-Hikmah berhasil meraih juara pertama dalam kompetisi debat antar asrama se-Jawa Barat yang diikuti 24 tim.',
-    gambar: '/bg_home.jpeg',
+      'Tim debat KMSGD berhasil meraih juara pertama dalam kompetisi debat antar asrama se-Jawa Barat yang diikuti 24 tim.',
+    gambar: '../public/bg_home.png',
     penting: false,
   },
   {
@@ -51,7 +51,7 @@ export const berita = [
     kategori: 'Kegiatan',
     ringkasan:
       'Kegiatan bakti sosial dan bazar amal dalam rangka memperingati bulan Ramadan, melibatkan seluruh warga asrama dan masyarakat sekitar.',
-    gambar: '/bg_home.jpeg',
+    gambar: '../public/bg_home.png',
     penting: false,
   },
   {
@@ -61,7 +61,7 @@ export const berita = [
     kategori: 'Pengumuman',
     ringkasan:
       'Seluruh pengurus baru diundang hadir dalam rapat koordinasi perdana untuk menyusun program kerja satu tahun ke depan.',
-    gambar: '/bg_home.jpeg',
+    gambar: '../public/bg_home.png',
     penting: false,
   },
   {
@@ -71,7 +71,7 @@ export const berita = [
     kategori: 'Kegiatan',
     ringkasan:
       'Workshop praktis tentang keamanan digital, media sosial yang sehat, dan pemanfaatan teknologi untuk produktivitas akademik.',
-    gambar: '/bg_home.jpeg',
+    gambar: '../public/bg_home.png',
     penting: false,
   },
 ]

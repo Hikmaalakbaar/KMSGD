@@ -11,11 +11,17 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2.5 mb-4">
               <div className="w-9 h-9 rounded-xl bg-cobalt-500 flex items-center justify-center">
-                <span className="text-white font-display font-bold text-sm">AH</span>
+                <div className="w-12 h-12 rounded-xl bg-yellow-500 flex items-center justify-center shadow-lg shadow-yellow-500/30 group-hover:scale-105 transition-transform overflow-hidden">
+              <img
+                src="/logo.jpeg"
+                alt="logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
               </div>
               <div>
-                <p className="font-display font-bold text-white text-sm">Al-Hikmah</p>
-                <p className="text-[10px] text-cobalt-400">Organisasi Asrama</p>
+                <p className="font-display font-bold text-white text-sm">KMSGD</p>
+                <p className="text-[10px] text-cobalt-400">Keluarga Mahasiswa Sunan Gunung Djati</p>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-slate-400 mb-5">
@@ -79,10 +85,10 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-500">
-            © {new Date().getFullYear()} Asrama Al-Hikmah. Hak cipta dilindungi.
+            © {new Date().getFullYear()} KMSGD. Hak cipta dilindungi.
           </p>
           <p className="text-xs text-slate-500">
-            Dibuat dengan <span className="text-orange-400">♥</span> oleh Tim IT Asrama
+            Dibuat dengan <span className="text-orange-400">♥</span> oleh Tim IT KMSG
           </p>
         </div>
       </div>

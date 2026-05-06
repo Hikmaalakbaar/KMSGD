@@ -22,7 +22,7 @@ export default function Tentang() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <SectionHeader label="Sejarah" title="Perjalanan Al-Hikmah" align="left" />
+              <SectionHeader label="Sejarah" title="Perjalanan KMSGD" align="left" />
               <p className="text-slate-600 leading-relaxed mb-4">
                 Asrama Al-Hikmah berdiri pada tahun {asramaInfo.founded} atas prakarsa para civitas akademika yang peduli terhadap pembinaan mahasiswa secara holistik — akademik, moral, dan sosial.
               </p>
@@ -55,7 +55,7 @@ export default function Tentang() {
       {/* Visi Misi */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader label="Nilai" title="Visi & Misi" subtitle="Landasan gerak dan arah perjuangan Asrama Al-Hikmah" />
+          <SectionHeader label="Nilai" title="Visi & Misi" subtitle="Landasan gerak dan arah perjuangan KMSGD" />
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
