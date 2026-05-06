@@ -32,28 +32,28 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed shadow-[0_4px_10px_rgba(0,0,0,0.2)] top-0 inset-x-0 z-50 transition-all duration-300 py-2 z-99 ${scrolled
-          ? "bg-white/80 backdrop-blur-md"
-          : "bg-white/95 backdrop-blur-sm"
+      className={`fixed shadow-[0_4px_10px_rgba(0,0,0,0.2)] top-0 inset-x-0 z-99 transition-all duration-300 py-2 ${scrolled
+        ? "bg-white/80 backdrop-blur-md"
+        : "bg-white/95 backdrop-blur-sm"
         }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <Link
             to="/"
             className="flex items-center gap-2.5 group"
             onClick={() => setOpen(false)}
           >
-            <div className="w-12 h-12 rounded-xl bg-yellow-500 flex items-center justify-center shadow-lg shadow-yellow-500/30 group-hover:scale-105 transition-transform overflow-hidden">
+            <div className="flex items-center justify-center w-12 h-12 overflow-hidden transition-transform bg-yellow-500 shadow-lg rounded-xl shadow-yellow-500/30 group-hover:scale-105">
               <img
                 src="/logo.jpeg"
                 alt="logo"
-                className="w-full h-full object-contain"
+                className="object-contain w-full h-full"
               />
             </div>
 
             <div className="leading-tight">
-              <p className="font-display font-bold text-slate-800 text-base">
+              <p className="text-base font-bold font-display text-slate-800">
                 KMSGD
               </p>
               <p className="text-sm font-medium -mt-0.5 flex flex-col" style={{ color: "#A07C08" }}>
@@ -62,7 +62,7 @@ export default function Navbar() {
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="items-center hidden gap-1 md:flex">
             {navItems.map(({ to, label }) => (
               <NavLink
                 key={to}
@@ -91,7 +91,7 @@ export default function Navbar() {
           </nav>
 
           <button
-            className="md:hidden p-2 rounded-lg text-slate-600 hover:bg-yellow-50 transition-colors"
+            className="p-2 transition-colors rounded-lg md:hidden text-slate-600 hover:bg-yellow-50"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
@@ -104,7 +104,7 @@ export default function Navbar() {
         className={`md:hidden overflow-hidden transition-all duration-300 ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
       >
-        <nav className="bg-white border-t border-slate-100 px-4 py-3 space-y-1">
+        <nav className="px-4 py-3 space-y-1 bg-white border-t border-slate-100">
           {navItems.map(({ to, label, icon: Icon }) => (
             <NavLink
               key={to}
