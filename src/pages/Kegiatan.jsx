@@ -9,7 +9,7 @@ export default function Kegiatan() {
                 <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/bg_home.png')",
+            backgroundImage: "url('/bg_kegiatan.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

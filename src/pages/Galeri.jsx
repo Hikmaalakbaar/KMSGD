@@ -17,7 +17,7 @@ export default function Galeri() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/bg_home.png')",
+            backgroundImage: "url('/bg_galeri.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

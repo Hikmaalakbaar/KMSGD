@@ -11,7 +11,7 @@ export default function Tentang() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/bg_home.png')",
+            backgroundImage: "url('/bg_tentang.jpeg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
