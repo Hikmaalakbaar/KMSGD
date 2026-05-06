@@ -124,7 +124,7 @@ export default function Maps() {
         }}>
           Temukan Kami
         </h2>
-        <p style={{ fontSize: 15, color: "#7A6E61", margin: 0 }}>
+        <p style={{ fontSize: 15, color: "#C8990A", margin: 0 }}>
           Kunjungi asrama kami di Bandung
         </p>
       </div>
@@ -156,7 +156,7 @@ export default function Maps() {
             boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
             display: "flex", gap: 14, alignItems: "flex-start",
           }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#5C3317", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>📍</div>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>📍</div>
             <div>
               <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 4 }}>Alamat</div>
               <div style={{ fontSize: 14, color: "#7A6E61", lineHeight: 1.6 }}>
@@ -174,7 +174,7 @@ export default function Maps() {
             boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
             display: "flex", gap: 14, alignItems: "flex-start",
           }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#5C3317", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>📱</div>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>📱</div>
             <div>
               <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>WhatsApp</div>
               <a href={`https://wa.me/6281234567890`} style={{ fontSize: 14, color: "#C9973A", textDecoration: "none" }}>{LOCATION.phone}</a>
@@ -190,7 +190,7 @@ export default function Maps() {
             boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
             display: "flex", gap: 14, alignItems: "flex-start",
           }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#5C3317", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>✉️</div>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>✉️</div>
             <div>
               <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>Email</div>
               <a href={`mailto:${LOCATION.email}`} style={{ fontSize: 14, color: "#C9973A", textDecoration: "none" }}>{LOCATION.email}</a>
@@ -206,7 +206,7 @@ export default function Maps() {
             boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
             display: "flex", gap: 14, alignItems: "flex-start",
           }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#5C3317", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>🕐</div>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>🕐</div>
             <div>
               <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>Jam Tamu</div>
               <div style={{ fontSize: 14, color: "#7A6E61", lineHeight: 1.6 }}>{LOCATION.hours}<br />{LOCATION.hours2}</div>
@@ -219,7 +219,7 @@ export default function Maps() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: "#5C3317",
+              background: "#C8990A",
               color: "#fff",
               padding: "14px 24px",
               borderRadius: 100,
