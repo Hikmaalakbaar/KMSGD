@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed shadow-[0_4px_10px_rgba(0,0,0,0.2)] top-0 inset-x-0 z-99 transition-all duration-300 py-2 ${scrolled
+      className={`fixed shadow-[0_4px_10px_rgba(0,0,0,0.2)] top-0 inset-x-0 z-50 transition-all duration-300 py-2 ${scrolled
         ? "bg-white/80 backdrop-blur-md"
         : "bg-white/95 backdrop-blur-sm"
         }`}

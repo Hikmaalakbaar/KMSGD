@@ -241,6 +241,8 @@ export default function Maps() {
           boxShadow: "0 8px 32px rgba(92,51,23,0.15)",
           border: "1px solid rgba(92,51,23,0.12)",
           minHeight: 420,
+          position: "relative",
+          zIndex: 20,
         }}>
           <LeafletMap />
         </div>

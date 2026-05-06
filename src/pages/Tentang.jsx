@@ -7,7 +7,7 @@ export default function Tentang() {
   return (
     <div className="pt-[4.69rem]">
       {/* Header */}
-      <section className="bg-gradient-to-br from-amber-600 to-amber-800 py-20 relative overflow-hidden">
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800">
         <div
           className="absolute inset-0"
           style={{
@@ -19,14 +19,14 @@ export default function Tentang() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">
             Profil Asrama
           </span>
-          <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">
+          <h1 className="mb-4 text-4xl font-extrabold text-white font-display sm:text-5xl">
             Tentang Kami
           </h1>
-          <p className="text-amber-100/80 max-w-xl mx-auto">
+          <p className="max-w-xl mx-auto text-amber-100/80">
             {asramaInfo.tagline}
           </p>
         </div>
@@ -34,31 +34,31 @@ export default function Tentang() {
 
       {/* Sejarah */}
       <section className="py-20 bg-[#F1F5F9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
               <SectionHeader
                 label="Sejarah"
                 title="Perjalanan KMSGD"
                 align="left"
               />
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="mb-4 leading-relaxed text-slate-600">
                 KMSGD berdiri pada tahun {asramaInfo.founded} atas prakarsa para
                 civitas akademika yang peduli terhadap pembinaan mahasiswa
                 secara holistik — akademik, moral, dan sosial.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-4">
+              <p className="mb-4 leading-relaxed text-slate-600">
                 Selama lebih dari dua dekade, asrama ini telah menjadi rumah
                 kedua bagi ratusan mahasiswa dari berbagai penjuru Indonesia,
                 mencetak generasi yang berilmu, berakhlak, dan berkarya nyata.
               </p>
-              <p className="text-slate-600 leading-relaxed">
+              <p className="leading-relaxed text-slate-600">
                 Kami percaya bahwa lingkungan yang baik adalah kunci pembentukan
                 karakter. Itulah mengapa setiap program dirancang untuk
                 menyeimbangkan prestasi akademik dengan pengembangan diri.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
+            <div className="p-8 bg-white shadow-sm rounded-2xl">
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { label: "Tahun Berdiri", value: asramaInfo.founded },
@@ -70,10 +70,10 @@ export default function Tentang() {
                     key={i}
                     className="text-center p-4 bg-[#F1F5F9] rounded-xl"
                   >
-                    <p className="font-display font-extrabold text-cobalt-500 text-3xl">
+                    <p className="text-3xl font-extrabold font-display text-cobalt-500">
                       {item.value}
                     </p>
-                    <p className="text-slate-500 text-sm mt-1">{item.label}</p>
+                    <p className="mt-1 text-sm text-slate-500">{item.label}</p>
                   </div>
                 ))}
               </div>
@@ -84,13 +84,13 @@ export default function Tentang() {
 
       {/* Visi Misi */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <SectionHeader
             label="Nilai"
             title="Visi & Misi"
             subtitle="Landasan gerak dan arah perjuangan KMSGD"
           />
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-3">
             {[
               {
                 icon: Eye,
@@ -117,10 +117,10 @@ export default function Tentang() {
                 >
                   <item.icon size={22} className="text-white" />
                 </div>
-                <h3 className="font-display font-bold text-slate-800 text-xl mb-3">
+                <h3 className="mb-3 text-xl font-bold font-display text-slate-800">
                   {item.judul}
                 </h3>
-                <p className="text-slate-500 leading-relaxed">{item.isi}</p>
+                <p className="leading-relaxed text-slate-500">{item.isi}</p>
               </div>
             ))}
           </div>
@@ -129,29 +129,29 @@ export default function Tentang() {
 
       {/* Struktur Organisasi */}
       <section className="py-20 bg-[#F1F5F9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <SectionHeader
             label="Pengurus"
             title="Struktur Organisasi"
             subtitle="Periode 2025–2026"
           />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {strukturOrganisasi.map((s, i) => (
               <div
                 key={i}
                 className="bg-white rounded-2xl p-5 text-center shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
               >
-                <div className="w-14 h-14 mx-auto mb-4">
+                <div className="mx-auto mb-4 w-14 h-14">
                   <img
                     src={s.foto} // pastikan ada properti foto di data
                     alt={s.nama}
-                    className="w-full h-full object-cover rounded-full shadow-md"
+                    className="object-cover w-full h-full rounded-full shadow-md"
                   />
                 </div>
                 <p className="text-[11px] font-bold uppercase tracking-wider text-orange-500 mb-1">
                   {s.jabatan}
                 </p>
-                <p className="font-display font-semibold text-slate-800">
+                <p className="font-semibold font-display text-slate-800">
                   {s.nama}
                 </p>
                 <p className="text-xs text-slate-400 mt-0.5">

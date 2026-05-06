@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react'
 export default function Kontak() {
   return (
     <div className="pt-[4.69rem]">
-      <section className="bg-gradient-to-br from-cobalt-600 to-cobalt-800 py-20 relative overflow-hidden">
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-cobalt-600 to-cobalt-800">
         <div
           className="absolute inset-0"
           style={{
@@ -15,35 +15,35 @@ export default function Kontak() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Hubungi Kami</span>
-          <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">Kontak</h1>
-          <p className="text-cobalt-200 max-w-xl mx-auto">Punya pertanyaan atau ingin bergabung? Kami siap membantu kamu!</p>
+          <h1 className="mb-4 text-4xl font-extrabold text-white font-display sm:text-5xl">Kontak</h1>
+          <p className="max-w-xl mx-auto text-cobalt-200">Punya pertanyaan atau ingin bergabung? Kami siap membantu kamu!</p>
         </div>
       </section>
 
       <section className="py-20 bg-[#F1F5F9]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-10">
+        <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
+          <div className="grid gap-10 md:grid-cols-2">
             {/* Info */}
             <div>
-              <h2 className="font-display font-bold text-slate-800 text-2xl mb-6">Informasi Kontak</h2>
+              <h2 className="mb-6 text-2xl font-bold font-display text-slate-800">Informasi Kontak</h2>
               <div className="space-y-5">
                 {[
                   { icon: MapPin, label: 'Alamat', value: asramaInfo.location, href: null },
                   { icon: Mail, label: 'Email', value: asramaInfo.email, href: `mailto:${asramaInfo.email}` },
                   { icon: Phone, label: 'WhatsApp', value: asramaInfo.whatsapp, href: `https://wa.me/${asramaInfo.whatsapp.replace(/\D/g, '')}` },
                 ].map((c, i) => (
-                  <div key={i} className="flex items-start gap-4 bg-white rounded-2xl p-5 shadow-sm">
-                    <div className="w-11 h-11 rounded-xl bg-cobalt-50 flex items-center justify-center shrink-0">
+                  <div key={i} className="flex items-start gap-4 p-5 bg-white shadow-sm rounded-2xl">
+                    <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-cobalt-50 shrink-0">
                       <c.icon size={18} className="text-cobalt-500" />
                     </div>
                     <div>
                       <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-0.5">{c.label}</p>
                       {c.href ? (
-                        <a href={c.href} className="text-slate-700 font-medium hover:text-cobalt-500 transition-colors">{c.value}</a>
+                        <a href={c.href} className="font-medium transition-colors text-slate-700 hover:text-cobalt-500">{c.value}</a>
                       ) : (
-                        <p className="text-slate-700 font-medium">{c.value}</p>
+                        <p className="font-medium text-slate-700">{c.value}</p>
                       )}
                     </div>
                   </div>
@@ -61,8 +61,8 @@ export default function Kontak() {
             </div>
 
             {/* Form */}
-            <div className="bg-white rounded-2xl shadow-sm p-8">
-              <h2 className="font-display font-bold text-slate-800 text-2xl mb-6">Kirim Pesan</h2>
+            <div className="p-8 bg-white shadow-sm rounded-2xl">
+              <h2 className="mb-6 text-2xl font-bold font-display text-slate-800">Kirim Pesan</h2>
               <form className="space-y-5" onSubmit={e => { e.preventDefault(); alert('Pesan terkirim! Kami akan segera menghubungi kamu.') }}>
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-1.5">Nama Lengkap</label>
