@@ -86,7 +86,7 @@ function LeafletMap() {
     };
   }, []);
 
-  return <div ref={mapRef} style={{ width: "100%", height: "100%", minHeight: "420px", zIndex:-1 }} />;
+  return <div ref={mapRef} style={{ width: "100%", height: "100%", minHeight: "420px" }} />;
 }
 
 export default function Maps() {
