@@ -154,7 +154,6 @@ export default function Home() {
               <BeritaCard key={b.id} berita={b} />
             ))}
           </div>
-            
           <div className="text-center mt-8 sm:hidden">
             <Link
               to="/pengumuman"
@@ -222,7 +221,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 text-slate-900 font-semibold px-6 py-3 rounded-xl transition-all duration-200 shadow-lg hover:-translate-y-0.5"
               style={{
                 backgroundColor: "#C8990A",
-                boxShadow: "0 8px 24px rgba(200, 153, 10, 0.25)",
+                boxShadow: "0 8px 24px rgba(255, 255, 255, 0.25)",
               }}
               onMouseEnter={(e) =>
                 (e.currentTarget.style.backgroundColor = "#A07C08")
