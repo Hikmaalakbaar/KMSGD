@@ -112,14 +112,14 @@ export const kegiatan = [
 ]
 
 export const strukturOrganisasi = [
-  { jabatan: 'Ketua Umum', nama: 'Ahmad Fauzan Ridho', angkatan: '2022' },
-  { jabatan: 'Wakil Ketua', nama: 'Siti Nur Aisyah', angkatan: '2022' },
-  { jabatan: 'Sekretaris', nama: 'Muhammad Haikal', angkatan: '2023' },
-  { jabatan: 'Bendahara', nama: 'Fatimah Az-Zahra', angkatan: '2023' },
-  { jabatan: 'Div. Pendidikan', nama: 'Rizky Firmansyah', angkatan: '2023' },
-  { jabatan: 'Div. Keagamaan', nama: 'Nurul Hidayah', angkatan: '2023' },
-  { jabatan: 'Div. Olahraga & Seni', nama: 'Bagas Prasetyo', angkatan: '2024' },
-  { jabatan: 'Div. Sosial & Humas', nama: 'Anisa Rahmawati', angkatan: '2024' },
+  { jabatan: 'Ketua Umum', nama: 'Ahmad Fauzan Ridho', angkatan: '2022', foto:"../public/avatar.jpg" },
+  { jabatan: 'Wakil Ketua', nama: 'Siti Nur Aisyah', angkatan: '2022', foto:"../public/avatar.jpg"},
+  { jabatan: 'Sekretaris', nama: 'Muhammad Haikal', angkatan: '2023', foto:"../public/avatar.jpg" },
+  { jabatan: 'Bendahara', nama: 'Fatimah Az-Zahra', angkatan: '2023' ,foto:"../public/avatar.jpg"},
+  { jabatan: 'Div. Pendidikan', nama: 'Rizky Firmansyah', angkatan: '2023', foto:"../public/avatar.jpg" },
+  { jabatan: 'Div. Keagamaan', nama: 'Nurul Hidayah', angkatan: '2023', foto:"../public/avatar.jpg" },
+  { jabatan: 'Div. Olahraga & Seni', nama: 'Bagas Prasetyo', angkatan: '2024' ,foto:"../public/avatar.jpg"},
+  { jabatan: 'Div. Sosial & Humas', nama: 'Anisa Rahmawati', angkatan: '2024', foto:"../public/avatar.jpg" },
 ]
 
 export const galeri = [
