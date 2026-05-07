@@ -11,7 +11,7 @@ export const asramaInfo = {
   founded: '2005',
   location: 'Jl. Pesantren No. 12, Cirebon, Jawa Barat',
   email: 'info@KMSGD.ac.id',
-  whatsapp: '+62 812-3456-7890',
+  whatsapp: '+62 851-7975-3475',
   description:
     'KMSGD adalah hunian resmi bagi mahasiswa dan santri yang mengedepankan nilai-nilai akademik, spiritual, dan sosial. Berdiri sejak 2005, kami telah membina ratusan generasi berprestasi.',
 }
@@ -369,7 +369,7 @@ export const galeri = [
 
 export const stats = [
   { label: 'Anggota Aktif', value: '128', icon: HiUserGroup },
-  { label: 'Alumni', value: '600+', icon: HiAcademicCap },
+  { label: 'Alumni', value: '200+', icon: HiAcademicCap },
   { label: 'Kegiatan/Tahun', value: '40+', icon: HiCalendar },
-  { label: 'Tahun Berdiri', value: '20+', icon: HiLibrary },
+  { label: 'Tahun Berdiri', value: '10+', icon: HiLibrary },
 ]

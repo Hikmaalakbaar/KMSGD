@@ -19,16 +19,6 @@ export default function Home() {
     <div>
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Decorative blobs */}
-        <div
-          className="absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full blur-[80px] pointer-events-none"
-          style={{ backgroundColor: "rgba(200, 153, 10, 0.15)" }}
-        />
-        <div
-          className="absolute bottom-0 -left-24 w-[360px] h-[360px] rounded-full blur-[80px] pointer-events-none"
-          style={{ backgroundColor: "rgba(192, 24, 90, 0.10)" }}
-        />
-        {/* Grid overlay */}
         <div
           className="absolute inset-0"
           style={{
@@ -38,29 +28,33 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
           }}
         />
-        <div className="absolute inset-0 bg-black/50" />
+
+        {/* Overlay dibuat lebih gelap agar teks lebih jelas */}
+        <div className="absolute inset-0 bg-black/65" />
 
         <div className="relative px-4 pt-20 pb-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             {/* Left */}
             <div className="animate-fade-up">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs font-semibold px-3.5 py-2 rounded-full mb-6">
-                <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
+              <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/25 text-white text-xs font-semibold px-3.5 py-2 rounded-full mb-6 shadow-lg">
+                <span className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></span>
                 Penerimaan Anggota Baru 2025 Dibuka!
               </div>
 
               <h1 className="flex flex-col">
-                <span className="font-display font-extrabold text-white sm:text-6xl leading-[1.1]">
+                <span className="font-display font-extrabold text-white text-6xl sm:text-7xl leading-[1.05] drop-shadow-lg">
                   KMSGD
                 </span>
+
                 <span
-                  className="mb-6 text-2xl font-medium text-start"
-                  style={{ color: "#C8990A" }}
+                  className="mb-6 text-2xl font-extrabold text-start drop-shadow-lg sm:text-3xl"
+                  style={{ color: "#FFD23F" }}
                 >
                   Keluarga Mahasiswa Sunan Gunung Djati
                 </span>
               </h1>
-              <p className="max-w-lg mb-8 text-lg leading-relaxed text-slate-300">
+
+              <p className="max-w-lg mb-8 text-lg font-medium leading-relaxed text-white drop-shadow-md">
                 {asramaInfo.tagline}. Bergabunglah bersama kami dan jadilah
                 bagian dari komunitas yang inspiratif.
               </p>
@@ -68,7 +62,7 @@ export default function Home() {
               <div className="flex flex-wrap gap-4">
                 <Link
                   to="/tentang"
-                  className="inline-flex items-center gap-2 text-slate-900 font-semibold px-6 py-3 rounded-xl transition-all duration-200 shadow-xl hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 text-slate-900 font-bold px-6 py-3 rounded-xl transition-all duration-200 shadow-xl hover:-translate-y-0.5"
                   style={{
                     backgroundColor: "#C8990A",
                     boxShadow: "0 8px 24px rgba(200, 153, 10, 0.35)",
@@ -82,9 +76,10 @@ export default function Home() {
                 >
                   Tentang Kami <ArrowRight size={16} />
                 </Link>
+
                 <Link
                   to="/pengumuman"
-                  className="inline-flex items-center gap-2 px-6 py-3 font-semibold text-white transition-all duration-200 border bg-white/10 hover:bg-white/20 backdrop-blur-sm border-white/20 rounded-xl"
+                  className="inline-flex items-center gap-2 px-6 py-3 font-bold text-white transition-all duration-200 border bg-white/10 hover:bg-white/20 backdrop-blur-md border-white/25 rounded-xl"
                 >
                   Lihat Pengumuman <ChevronRight size={16} />
                 </Link>
@@ -92,17 +87,23 @@ export default function Home() {
             </div>
 
             {/* Right — Stats cards */}
-            <div className="grid grid-cols-2 gap-4 delay-200 animate-fade-up">
+            <div className="grid grid-cols-2 gap-5 delay-200 animate-fade-up">
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className="p-5 transition-all duration-300 bg-white/10 first-letter:border border-white/15 rounded-2xl hover:bg-white/15 hover:-translate-y-1"
+                  className="p-6 transition-all duration-300 border shadow-2xl bg-black/30 border-white/20 rounded-2xl backdrop-blur-xl hover:bg-black/40 hover:-translate-y-1"
                 >
-                  <div className="mb-2 text-3xl text-yellow-400"><s.icon /></div>
-                  <p className="text-3xl font-extrabold text-white font-display">
+                  <div className="mb-3 text-3xl text-yellow-400">
+                    <s.icon />
+                  </div>
+
+                  <p className="text-4xl font-extrabold text-white font-display drop-shadow-md">
                     {s.value}
                   </p>
-                  <p className="text-slate-400 text-sm mt-0.5">{s.label}</p>
+
+                  <p className="mt-1 text-sm font-medium text-slate-200 drop-shadow-sm">
+                    {s.label}
+                  </p>
                 </div>
               ))}
             </div>
