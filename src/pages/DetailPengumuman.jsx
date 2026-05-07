@@ -43,7 +43,7 @@ function renderKonten(text) {
       els.push(
         <div key={`tbl-${i}`} className="my-6 overflow-x-auto border rounded-xl border-slate-200">
           <table className="w-full text-sm">
-            <thead className="text-white bg-cobalt-600">
+            <thead className="text-white bg-yellow-600">
               <tr>
                 {headers.map((h, j) => (
                   <th key={j} className="text-left px-4 py-2.5 font-semibold text-xs uppercase tracking-wider">
@@ -80,7 +80,7 @@ function renderKonten(text) {
         <ol key={`ol-${i}`} className="flex flex-col gap-2 my-4">
           {items.map((item, j) => (
             <li key={j} className="flex gap-3 text-sm leading-relaxed text-slate-600">
-              <span className="font-bold text-cobalt-600 min-w-[22px] text-base leading-none mt-0.5">
+              <span className="font-bold text-yellow-600 min-w-[22px] text-base leading-none mt-0.5">
                 {j + 1}.
               </span>
               <span dangerouslySetInnerHTML={{ __html: inlineFormat(item) }} />
@@ -102,7 +102,7 @@ function renderKonten(text) {
         <ul key={`ul-${i}`} className="my-4 flex flex-col gap-1.5">
           {items.map((item, j) => (
             <li key={j} className="flex gap-2.5 text-slate-600 text-sm leading-relaxed">
-              <span className="text-cobalt-500 mt-1.5 shrink-0 text-xs">●</span>
+              <span className="text-yellow-500 mt-1.5 shrink-0 text-xs">●</span>
               <span dangerouslySetInnerHTML={{ __html: inlineFormat(item) }} />
             </li>
           ))}
@@ -114,7 +114,7 @@ function renderKonten(text) {
     // Italic blockquote (*"...")
     if (line.startsWith('*"') || line.startsWith('— ')) {
       els.push(
-        <blockquote key={i} className="py-1 pl-5 my-6 text-base italic border-l-4 border-cobalt-400 text-slate-500">
+        <blockquote key={i} className="py-1 pl-5 my-6 text-base italic border-l-4 border-yellow-400 text-slate-500">
           <span dangerouslySetInnerHTML={{ __html: inlineFormat(line) }} />
         </blockquote>
       )
@@ -155,7 +155,7 @@ function formatTanggal(str) {
 
 // ── Badge warna per kategori ────────────────────────────────────────────────
 const katBadge = {
-  Pengumuman: 'bg-cobalt-100 text-cobalt-700',
+  Pengumuman: 'bg-yellow-100 text-yellow-700',
   Kegiatan:   'bg-orange-100 text-orange-700',
   Prestasi:   'bg-emerald-100 text-emerald-700',
 }
@@ -179,7 +179,7 @@ export default function DetailPengumuman() {
         <p className="text-sm text-slate-400">Artikel dengan ID #{id} tidak tersedia.</p>
         <Link
           to="/pengumuman"
-          className="mt-3 bg-cobalt-600 hover:bg-cobalt-700 text-white text-sm font-semibold px-6 py-2.5 rounded-xl transition-colors no-underline"
+          className="mt-3 bg-yellow-600 hover:bg-yellow-700 text-white text-sm font-semibold px-6 py-2.5 rounded-xl transition-colors no-underline"
         >
           ← Kembali ke Pengumuman
         </Link>
@@ -191,7 +191,7 @@ export default function DetailPengumuman() {
     <div className="pt-[4.69rem]">
 
       {/* ── HERO ── */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-cobalt-700 to-cobalt-900">
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-yellow-700 to-yellow-900">
         {item.gambar && (
           <>
             <div
@@ -230,7 +230,7 @@ export default function DetailPengumuman() {
           {/* Meta */}
           <div className="flex flex-wrap items-center gap-3 text-xs text-white/55">
             <span className="flex items-center gap-1.5">
-              <span className="text-cobalt-300">✦</span>
+              <span className="text-yellow-300">✦</span>
               {item.penulis}
             </span>
             <span>·</span>
@@ -247,8 +247,8 @@ export default function DetailPengumuman() {
             {/* ── Artikel utama ── */}
             <article className="overflow-hidden bg-white border shadow-sm rounded-2xl border-slate-200">
               {/* Ringkasan highlight */}
-              <div className="px-6 py-4 m-6 border-l-4 border-cobalt-500 bg-cobalt-50 rounded-r-xl">
-                <p className="text-sm italic leading-relaxed text-cobalt-800">
+              <div className="px-6 py-4 m-6 border-l-4 border-yellow-500 bg-yellow-50 rounded-r-xl">
+                <p className="text-sm italic leading-relaxed text-yellow-800">
                   {item.ringkasan}
                 </p>
               </div>
@@ -269,13 +269,13 @@ export default function DetailPengumuman() {
               <div className="flex flex-col items-start justify-between gap-3 px-6 py-4 border-t border-slate-100 sm:flex-row sm:items-center">
                 <button
                   onClick={() => navigate(-1)}
-                  className="text-sm text-slate-400 hover:text-cobalt-600 transition-colors cursor-pointer bg-transparent border-none p-0 flex items-center gap-1.5"
+                  className="text-sm text-slate-400 hover:text-yellow-600 transition-colors cursor-pointer bg-transparent border-none p-0 flex items-center gap-1.5"
                 >
                   ← Kembali
                 </button>
                 <button
                   onClick={() => navigator.clipboard?.writeText(window.location.href)}
-                  className="text-xs font-semibold text-cobalt-600 border border-cobalt-200 hover:bg-cobalt-50 px-3.5 py-1.5 rounded-lg transition-colors cursor-pointer bg-transparent"
+                  className="text-xs font-semibold text-yellow-600 border border-yellow-200 hover:bg-yellow-50 px-3.5 py-1.5 rounded-lg transition-colors cursor-pointer bg-transparent"
                 >
                   Salin Link
                 </button>
@@ -287,7 +287,7 @@ export default function DetailPengumuman() {
 
               {/* Info box */}
               <div className="p-5 bg-white border shadow-sm rounded-2xl border-slate-200">
-                <p className="text-[10px] font-bold text-cobalt-600 uppercase tracking-widest mb-4">
+                <p className="text-[10px] font-bold text-yellow-600 uppercase tracking-widest mb-4">
                   Info Artikel
                 </p>
                 <div className="flex flex-col gap-4">
@@ -306,7 +306,7 @@ export default function DetailPengumuman() {
 
               {/* Artikel terkait */}
               <div className="p-5 bg-white border shadow-sm rounded-2xl border-slate-200">
-                <p className="text-[10px] font-bold text-cobalt-600 uppercase tracking-widest mb-4">
+                <p className="text-[10px] font-bold text-yellow-600 uppercase tracking-widest mb-4">
                   Artikel Lainnya
                 </p>
                 <div className="flex flex-col gap-0 divide-y divide-slate-100">
@@ -319,7 +319,7 @@ export default function DetailPengumuman() {
                       <span className={`inline-block text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full mb-1.5 ${katBadge[rel.kategori] || 'bg-slate-100 text-slate-500'}`}>
                         {rel.kategori}
                       </span>
-                      <p className="text-sm font-semibold leading-snug transition-colors text-slate-700 group-hover:text-cobalt-600">
+                      <p className="text-sm font-semibold leading-snug transition-colors text-slate-700 group-hover:text-yellow-600">
                         {rel.judul}
                       </p>
                       <p className="mt-1 text-xs text-slate-400">{formatTanggal(rel.tanggal)}</p>
@@ -329,7 +329,7 @@ export default function DetailPengumuman() {
 
                 <Link
                   to="/pengumuman"
-                  className="mt-3 w-full block text-center text-xs font-semibold text-cobalt-600 border border-cobalt-200 hover:bg-cobalt-50 py-2.5 rounded-xl transition-colors no-underline"
+                  className="mt-3 w-full block text-center text-xs font-semibold text-yellow-600 border border-yellow-200 hover:bg-yellow-50 py-2.5 rounded-xl transition-colors no-underline"
                 >
                   Lihat Semua →
                 </Link>
