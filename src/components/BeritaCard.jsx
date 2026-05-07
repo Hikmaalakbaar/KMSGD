@@ -28,7 +28,7 @@ export default function BeritaCard({ berita, featured = false }) {
     return (
       <article className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col md:flex-row">
         {/* Thumbnail */}
-        <div className={`relative md:w-72 h-48 md:h-auto flex-shrink-0 flex items-center justify-center ${!berita.gambar ? `bg-gradient-to-br ${gradient}` : ''}`}>
+        <div className={`relative h-48 md:w-72 md:h-auto flex-shrink-0 flex items-center justify-center ${!berita.gambar ? `bg-gradient-to-br ${gradient}` : ''}`}>
           {berita.penting && (
             <span className="absolute top-3 left-3 z-10 bg-orange-400 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
               Penting
@@ -46,7 +46,7 @@ export default function BeritaCard({ berita, featured = false }) {
         </div>
 
         {/* Content */}
-        <div className="p-6 flex flex-col justify-between gap-4">
+        <div className="flex flex-col justify-between gap-3 p-4 sm:p-6 sm:gap-4">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <KategoriBadge kategori={berita.kategori} />
@@ -55,7 +55,7 @@ export default function BeritaCard({ berita, featured = false }) {
               </span>
             </div>
             <h3
-              className="font-display font-bold text-slate-800 text-xl mb-2 transition-colors leading-snug"
+              className="font-display font-bold text-slate-800 text-lg sm:text-xl mb-2 transition-colors leading-snug"
               onMouseEnter={e => e.currentTarget.style.color = '#A07C08'}
               onMouseLeave={e => e.currentTarget.style.color = ''}
             >

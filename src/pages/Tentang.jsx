@@ -7,7 +7,7 @@ export default function Tentang() {
   return (
     <div className="pt-[4.69rem]">
       {/* Header */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-amber-600 to-amber-800">
+      <section className="relative py-14 overflow-hidden sm:py-20 bg-gradient-to-br from-amber-600 to-amber-800">
         <div
           className="absolute inset-0"
           style={{
@@ -23,7 +23,7 @@ export default function Tentang() {
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">
             Profil Asrama
           </span>
-          <h1 className="mb-4 text-4xl font-extrabold text-white font-display sm:text-5xl">
+          <h1 className="mb-4 text-3xl font-extrabold text-white font-display sm:text-4xl lg:text-5xl">
             Tentang Kami
           </h1>
           <p className="max-w-xl mx-auto text-amber-100/80">
@@ -33,7 +33,7 @@ export default function Tentang() {
       </section>
 
       {/* Sejarah */}
-      <section className="py-20 bg-[#F1F5F9]">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#F1F5F9]">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
@@ -58,7 +58,7 @@ export default function Tentang() {
                 menyeimbangkan prestasi akademik dengan pengembangan diri.
               </p>
             </div>
-            <div className="p-8 bg-white shadow-sm rounded-2xl">
+            <div className="p-5 bg-white shadow-sm sm:p-8 rounded-2xl">
               <div className="grid grid-cols-2 gap-6">
                 {[
                   { label: "Tahun Berdiri", value: asramaInfo.founded },
@@ -70,7 +70,7 @@ export default function Tentang() {
                     key={i}
                     className="text-center p-4 bg-[#F1F5F9] rounded-xl"
                   >
-                    <p className="text-3xl font-extrabold font-display text-[#C8990A]">
+                    <p className="text-2xl font-extrabold sm:text-3xl font-display text-[#C8990A]">
                       {item.value}
                     </p>
                     <p className="mt-1 text-sm text-slate-500">{item.label}</p>
@@ -83,14 +83,14 @@ export default function Tentang() {
       </section>
 
       {/* Visi Misi */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white sm:py-16 lg:py-20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <SectionHeader
             label="Nilai"
             title="Visi & Misi"
             subtitle="Landasan gerak dan arah perjuangan KMSGD"
           />
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 icon: Eye,
@@ -111,7 +111,7 @@ export default function Tentang() {
                 isi: "Ilmu, integritas, kebersamaan, dan pengabdian — empat pilar yang menjadi fondasi setiap langkah gerak organisasi dan anggotanya.",
               },
             ].map((item, i) => (
-              <div key={i} className="bg-[#F1F5F9] rounded-2xl p-7">
+              <div key={i} className="bg-[#F1F5F9] rounded-2xl p-5 sm:p-7">
                 <div
                   className={`w-12 h-12 rounded-xl ${item.color === "cobalt" ? "bg-cobalt-500" : "bg-orange-400"} flex items-center justify-center mb-5 shadow-lg ${item.color === "cobalt" ? "shadow-cobalt-500/25" : "shadow-orange-400/25"}`}
                 >
@@ -128,14 +128,14 @@ export default function Tentang() {
       </section>
 
       {/* Struktur Organisasi */}
-      <section className="py-20 bg-[#F1F5F9]">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#F1F5F9]">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <SectionHeader
             label="Pengurus"
             title="Struktur Organisasi"
             subtitle="Periode 2025–2026"
           />
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
             {strukturOrganisasi.map((s, i) => (
               <div
                 key={i}

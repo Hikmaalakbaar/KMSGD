@@ -87,172 +87,82 @@ function LeafletMap() {
     };
   }, []);
 
-  return <div ref={mapRef} style={{ width: "100%", height: "100%", minHeight: "420px" }} />;
+  return <div ref={mapRef} style={{ width: "100%", height: "100%", minHeight: "320px" }} />;
+}
+
+/* ── Info Card ── */
+function InfoCard({ icon: Icon, title, children }) {
+  return (
+    <div className="flex gap-3 p-4 bg-white border rounded-xl sm:gap-3.5 sm:p-5 sm:rounded-2xl border-black/5 shadow-[0_2px_12px_rgba(92,51,23,0.06)]">
+      <div className="flex items-center justify-center w-10 h-10 text-white rounded-lg shrink-0 sm:w-11 sm:h-11 sm:rounded-xl" style={{ background: "#C8990A" }}>
+        <Icon className="w-5 h-5" />
+      </div>
+      <div className="min-w-0">
+        <div className="text-xs font-semibold sm:text-sm" style={{ color: "#1A1510" }}>{title}</div>
+        <div className="text-xs leading-relaxed sm:text-sm" style={{ color: "#7A6E61" }}>
+          {children}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function Maps() {
   return (
-    <section style={{
-      background: "#F0F2F5",
-      padding: "80px 5%",
-      fontFamily: "'DM Sans', sans-serif",
-    }}>
+    <section className="py-12 sm:py-16 lg:py-20" style={{ background: "#F0F2F5", fontFamily: "'DM Sans', sans-serif" }}>
 
       {/* ── JUDUL ── */}
-      <div style={{ textAlign: "center", marginBottom: 56 }}>
-        <span style={{
-          display: "inline-block",
+      <div className="mb-8 text-center sm:mb-12 lg:mb-14">
+        <span className="inline-block text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] px-3 sm:px-4 py-1 sm:py-1.5 mb-3 sm:mb-4 rounded-full" style={{
           background: "#FDF8F0",
           color: "#C9973A",
           border: "1.5px solid #E8C97A",
-          borderRadius: 100,
-          fontSize: 12,
-          fontWeight: 600,
-          letterSpacing: "0.12em",
-          textTransform: "uppercase",
-          padding: "5px 16px",
-          marginBottom: 16,
         }}>
           • Lokasi
         </span>
-        <h2 style={{
-          fontSize: "clamp(28px, 4vw, 42px)",
-          fontWeight: 700,
-          color: "#1A1510",
-          margin: "0 0 10px",
-          letterSpacing: "-0.5px",
-          lineHeight: 1.2,
-        }}>
+        <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-bold leading-tight mb-2" style={{ color: "#1A1510", letterSpacing: "-0.5px" }}>
           Temukan Kami
         </h2>
-        <p style={{ fontSize: 15, color: "#C8990A", margin: 0 }}>
+        <p className="text-sm sm:text-[15px]" style={{ color: "#C8990A" }}>
           Kunjungi asrama kami di Bandung
         </p>
       </div>
 
       {/* ── SPLIT LAYOUT ── */}
-      <div style={{
-        display: "flex",
-        gap: 32,
-        alignItems: "stretch",
-        maxWidth: 1100,
-        margin: "0 auto",
-        flexWrap: "wrap",
-      }}>
+      <div className="flex flex-col max-w-[1100px] mx-auto px-4 sm:px-6 gap-6 sm:gap-8 lg:flex-row lg:items-stretch">
 
-        {/* KIRI — Info Alamat 50% */}
-        <div style={{
-          flex: "1 1 300px",
-          display: "flex",
-          flexDirection: "column",
-          gap: 20,
-          justifyContent: "center",
-        }}>
-          {/* Alamat */}
-          <div style={{
-            background: "#fff",
-            borderRadius: 16,
-            padding: "22px 24px",
-            border: "1px solid rgba(92,51,23,0.1)",
-            boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
-            display: "flex", gap: 14, alignItems: "flex-start",
-          }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0, color: "white" }}>
-              < HiMapPin />
-            </div>
-            <div>
-              <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 4 }}>Alamat</div>
-              <div style={{ fontSize: 14, color: "#7A6E61", lineHeight: 1.6 }}>
-                {LOCATION.address}<br />{LOCATION.city}
-              </div>
-            </div>
-          </div>
+        {/* KIRI — Info Alamat */}
+        <div className="flex flex-col gap-3 sm:gap-4 lg:flex-1 lg:justify-center">
+          <InfoCard icon={HiMapPin} title="Alamat">
+            {LOCATION.address}<br />{LOCATION.city}
+          </InfoCard>
 
-          {/* WhatsApp */}
-          <div style={{
-            background: "#fff",
-            borderRadius: 16,
-            padding: "22px 24px",
-            border: "1px solid rgba(92,51,23,0.1)",
-            boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
-            display: "flex", gap: 14, alignItems: "flex-start",
-          }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0, color: "white" }}>
-              <HiPhone />
-            </div>
-            <div>
-              <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>WhatsApp</div>
-              <a href={`https://wa.me/6281234567890`} style={{ fontSize: 14, color: "#C9973A", textDecoration: "none" }}>{LOCATION.phone}</a>
-            </div>
-          </div>
+          <InfoCard icon={HiPhone} title="WhatsApp">
+            <a href={`https://wa.me/6281234567890`} className="no-underline" style={{ color: "#C9973A" }}>{LOCATION.phone}</a>
+          </InfoCard>
 
-          {/* Email */}
-          <div style={{
-            background: "#fff",
-            borderRadius: 16,
-            padding: "22px 24px",
-            border: "1px solid rgba(92,51,23,0.1)",
-            boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
-            display: "flex", gap: 14, alignItems: "flex-start",
-          }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0, color: "white" }}>
-              <HiEnvelope />
-            </div>
-            <div>
-              <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>Email</div>
-              <a href={`mailto:${LOCATION.email}`} style={{ fontSize: 14, color: "#C9973A", textDecoration: "none" }}>{LOCATION.email}</a>
-            </div>
-          </div>
+          <InfoCard icon={HiEnvelope} title="Email">
+            <a href={`mailto:${LOCATION.email}`} className="no-underline" style={{ color: "#C9973A" }}>{LOCATION.email}</a>
+          </InfoCard>
 
-          {/* Jam Tamu */}
-          <div style={{
-            background: "#fff",
-            borderRadius: 16,
-            padding: "22px 24px",
-            border: "1px solid rgba(92,51,23,0.1)",
-            boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
-            display: "flex", gap: 14, alignItems: "flex-start",
-          }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0, color: "white" }}>
-              <HiClock />
-            </div>
-            <div>
-              <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>Jam Tamu</div>
-              <div style={{ fontSize: 14, color: "#7A6E61", lineHeight: 1.6 }}>{LOCATION.hours}<br />{LOCATION.hours2}</div>
-            </div>
-          </div>
+          <InfoCard icon={HiClock} title="Jam Tamu">
+            {LOCATION.hours}<br />{LOCATION.hours2}
+          </InfoCard>
 
           {/* Tombol */}
           <a
             href={`https://www.google.com/maps/search/?api=1&query=${LOCATION.lat},${LOCATION.lng}`}
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              background: "#C8990A",
-              color: "#fff",
-              padding: "14px 24px",
-              borderRadius: 100,
-              fontSize: 14,
-              fontWeight: 500,
-              textDecoration: "none",
-              textAlign: "center",
-            }}
+            className="block py-3 text-sm font-medium text-center text-white no-underline transition-opacity rounded-full sm:py-3.5 hover:opacity-90"
+            style={{ background: "#C8990A" }}
           >
             Buka di Google Maps →
           </a>
         </div>
 
-        {/* KANAN — Peta 50% */}
-        <div style={{
-          flex: "1 1 400px",
-          borderRadius: 20,
-          overflow: "hidden",
-          boxShadow: "0 8px 32px rgba(92,51,23,0.15)",
-          border: "1px solid rgba(92,51,23,0.12)",
-          minHeight: 420,
-          position: "relative",
-          zIndex: 20,
-        }}>
+        {/* KANAN — Peta */}
+        <div className="lg:flex-1 min-h-[280px] sm:min-h-[350px] lg:min-h-[420px] rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(92,51,23,0.15)] border border-black/10 relative z-20">
           <LeafletMap />
         </div>
       </div>

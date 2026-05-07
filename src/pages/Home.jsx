@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div>
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="relative min-h-[70vh] sm:min-h-[80vh] lg:min-h-[92vh] flex items-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div
           className="absolute inset-0"
           style={{
@@ -42,24 +42,24 @@ export default function Home() {
               </div>
 
               <h1 className="flex flex-col">
-                <span className="font-display font-extrabold text-white text-6xl sm:text-7xl leading-[1.05] drop-shadow-lg">
+                <span className="font-display font-extrabold text-white text-4xl sm:text-6xl lg:text-7xl leading-[1.05] drop-shadow-lg">
                   KMSGD
                 </span>
 
                 <span
-                  className="mb-6 text-2xl font-extrabold text-start drop-shadow-lg sm:text-3xl"
+                  className="mb-4 text-lg font-extrabold sm:mb-6 sm:text-2xl lg:text-3xl text-start drop-shadow-lg"
                   style={{ color: "#FFD23F" }}
                 >
                   Keluarga Mahasiswa Sunan Gunung Djati
                 </span>
               </h1>
 
-              <p className="max-w-lg mb-8 text-lg font-medium leading-relaxed text-white drop-shadow-md">
+              <p className="max-w-lg mb-6 text-sm font-medium leading-relaxed text-white sm:mb-8 sm:text-base lg:text-lg drop-shadow-md">
                 {asramaInfo.tagline}. Bergabunglah bersama kami dan jadilah
                 bagian dari komunitas yang inspiratif.
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                 <Link
                   to="/tentang"
                   className="inline-flex items-center gap-2 text-slate-900 font-bold px-6 py-3 rounded-xl transition-all duration-200 shadow-xl hover:-translate-y-0.5"
@@ -87,17 +87,17 @@ export default function Home() {
             </div>
 
             {/* Right — Stats cards */}
-            <div className="grid grid-cols-2 gap-5 delay-200 animate-fade-up">
+            <div className="grid grid-cols-2 gap-3 delay-200 sm:gap-5 animate-fade-up">
               {stats.map((s, i) => (
                 <div
                   key={i}
-                  className="p-6 transition-all duration-300 border shadow-2xl bg-black/30 border-white/20 rounded-2xl backdrop-blur-xl hover:bg-black/40 hover:-translate-y-1"
+                  className="p-4 transition-all duration-300 border shadow-2xl sm:p-6 bg-black/30 border-white/20 rounded-2xl backdrop-blur-xl hover:bg-black/40 hover:-translate-y-1"
                 >
-                  <div className="mb-3 text-3xl text-yellow-400">
+                  <div className="mb-2 text-2xl text-yellow-400 sm:mb-3 sm:text-3xl">
                     <s.icon />
                   </div>
 
-                  <p className="text-4xl font-extrabold text-white font-display drop-shadow-md">
+                  <p className="text-2xl font-extrabold text-white sm:text-4xl font-display drop-shadow-md">
                     {s.value}
                   </p>
 
@@ -126,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* ── BERITA TERBARU ─────────────────────────────────────── */}
-      <section className="py-20 bg-[#F1F5F9]">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#F1F5F9]">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-10">
             <SectionHeader
@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* ── KEGIATAN UNGGULAN ──────────────────────────────────── */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white sm:py-16 lg:py-20">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <SectionHeader
             label="Program"
@@ -238,10 +238,10 @@ export default function Home() {
       </section>
 
       {/* ── CTA REKRUTMEN ──────────────────────────────────────── */}
-      <section className="py-20 bg-[#F1F5F9]">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#F1F5F9]">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div
-            className="relative px-8 overflow-hidden rounded-3xl md:px-14 py-14"
+            className="relative px-6 py-10 overflow-hidden sm:px-8 md:px-14 sm:py-14 rounded-2xl sm:rounded-3xl"
             style={{
               background:
                 "linear-gradient(to right, #1A1A1A, #3D2E00, #1A1A1A)",
@@ -272,7 +272,7 @@ export default function Home() {
                     Bergabung Sekarang
                   </span>
                 </div>
-                <h2 className="mb-3 text-3xl font-extrabold text-white font-display sm:text-4xl">
+                <h2 className="mb-3 text-2xl font-extrabold text-white font-display sm:text-3xl lg:text-4xl">
                   Daftar Jadi Anggota Baru
                 </h2>
                 <p
@@ -283,7 +283,7 @@ export default function Home() {
                   baru untuk tahun akademik 2025/2026 telah dibuka.
                 </p>
               </div>
-              <div className="flex flex-col gap-3 shrink-0">
+              <div className="flex flex-col w-full gap-3 sm:w-auto shrink-0">
                 <Link
                   to="/kontak"
                   className="inline-flex items-center justify-center gap-2 text-slate-900 font-bold px-8 py-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 whitespace-nowrap"

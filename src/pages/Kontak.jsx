@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, MessageCircle } from 'lucide-react'
 export default function Kontak() {
   return (
     <div className="pt-[4.69rem]">
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-cobalt-600 to-cobalt-800">
+      <section className="relative py-14 overflow-hidden sm:py-20 bg-gradient-to-br from-cobalt-600 to-cobalt-800">
         <div
           className="absolute inset-0"
           style={{
@@ -17,14 +17,14 @@ export default function Kontak() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         <div className="relative px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Hubungi Kami</span>
-          <h1 className="mb-4 text-4xl font-extrabold text-white font-display sm:text-5xl">Kontak</h1>
+          <h1 className="mb-4 text-3xl font-extrabold text-white font-display sm:text-4xl lg:text-5xl">Kontak</h1>
           <p className="max-w-xl mx-auto text-cobalt-200">Punya pertanyaan atau ingin bergabung? Kami siap membantu kamu!</p>
         </div>
       </section>
 
-      <section className="py-20 bg-[#F1F5F9]">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#F1F5F9]">
         <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
-          <div className="grid gap-10 md:grid-cols-2">
+          <div className="grid gap-8 md:gap-10 md:grid-cols-2">
             {/* Info */}
             <div>
               <h2 className="mb-6 text-2xl font-bold font-display text-slate-800">Informasi Kontak</h2>
@@ -61,7 +61,7 @@ export default function Kontak() {
             </div>
 
             {/* Form */}
-            <div className="p-8 bg-white shadow-sm rounded-2xl">
+            <div className="p-5 bg-white shadow-sm sm:p-8 rounded-2xl">
               <h2 className="mb-6 text-2xl font-bold font-display text-slate-800">Kirim Pesan</h2>
               <form className="space-y-5" onSubmit={e => { e.preventDefault(); alert('Pesan terkirim! Kami akan segera menghubungi kamu.') }}>
                 <div>

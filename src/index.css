@@ -5,14 +5,23 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     font-family: 'DM Sans', sans-serif;
     background-color: #F1F5F9;
     color: #1e293b;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    word-break: break-word;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 

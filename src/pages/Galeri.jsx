@@ -70,12 +70,12 @@ export default function Galeri() {
             </button>
 
             {/* Image */}
-            <div className={`w-full aspect-video rounded-t-2xl bg-gradient-to-br ${gradients[selected % gradients.length]} flex items-center justify-center`}>
+            <div className={`w-full aspect-video rounded-t-xl sm:rounded-t-2xl bg-gradient-to-br ${gradients[selected % gradients.length]} flex items-center justify-center`}>
               <span className="text-8xl opacity-40">🖼️</span>
             </div>
 
             {/* Caption */}
-            <div className="flex items-center justify-between px-6 py-4 bg-white rounded-b-2xl">
+            <div className="flex items-center justify-between px-4 py-3 bg-white sm:px-6 sm:py-4 rounded-b-xl sm:rounded-b-2xl">
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-cobalt-600 bg-cobalt-50 border border-cobalt-100 px-2.5 py-1 rounded-full">
                   {galeri[selected].kategori}
@@ -106,7 +106,7 @@ export default function Galeri() {
       )}
 
       {/* ── HERO ───────────────────────────────────────────── */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
+      <section className="relative py-14 overflow-hidden sm:py-20 bg-gradient-to-br from-slate-800 to-slate-900">
         <div
           className="absolute inset-0"
           style={{
@@ -120,23 +120,23 @@ export default function Galeri() {
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">
             Dokumentasi
           </span>
-          <h1 className="mb-4 text-4xl font-extrabold text-white font-display sm:text-5xl">Galeri</h1>
+          <h1 className="mb-4 text-3xl font-extrabold text-white font-display sm:text-4xl lg:text-5xl">Galeri</h1>
           <p className="max-w-xl mx-auto text-slate-300">Dokumentasi kegiatan dan momen berharga KMSGD</p>
         </div>
       </section>
 
       {/* ── GRID ───────────────────────────────────────────── */}
-      <section className="py-20 bg-[#F1F5F9]">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#F1F5F9]">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <SectionHeader label="Galeri Foto" title="Dokumentasi Kegiatan" />
 
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+          <div className="grid gap-3 sm:gap-4 grid-cols-1 min-[480px]:grid-cols-2 md:grid-cols-3">
             {galeri.map((g, i) => (
               <div
                 key={g.id}
                 onClick={() => setSelected(i)}
                 className={`group relative rounded-2xl overflow-hidden cursor-pointer ${
-                  i === 0 ? 'col-span-2 row-span-2' : ''
+                  i === 0 ? 'min-[480px]:col-span-2 min-[480px]:row-span-2' : ''
                 }`}
                 style={{ aspectRatio: i === 0 ? '16/9' : '4/3' }}
               >

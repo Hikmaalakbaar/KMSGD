@@ -19,7 +19,7 @@ export default function Pengumuman() {
 
   return (
     <div className="pt-[4.69rem]">
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-yellow-700 to-yellow-900">
+      <section className="relative py-14 overflow-hidden sm:py-20 bg-gradient-to-br from-yellow-700 to-yellow-900">
         <div
           className="absolute inset-0"
           style={{
@@ -32,12 +32,12 @@ export default function Pengumuman() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         <div className="relative px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Informasi Resmi</span>
-          <h1 className="mb-4 text-4xl font-extrabold text-white font-display sm:text-5xl">Pengumuman</h1>
+          <h1 className="mb-4 text-3xl font-extrabold text-white font-display sm:text-4xl lg:text-5xl">Pengumuman</h1>
           <p className="max-w-xl mx-auto text-yellow-200">Informasi, pengumuman, dan berita terbaru dari KMSGD</p>
         </div>
       </section>
 
-      <section className="py-16 bg-[#F1F5F9]">
+      <section className="py-10 sm:py-16 bg-[#F1F5F9]">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           {/* Filter bar */}
           <div className="flex flex-col gap-4 mb-10 sm:flex-row">
@@ -51,12 +51,12 @@ export default function Pengumuman() {
                 className="w-full pl-10 pr-4 py-2.5 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-yellow-300 focus:border-yellow-400"
               />
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 -mx-1 sm:mx-0">
               {kategoriList.map(k => (
                 <button
                   key={k}
                   onClick={() => setFilter(k)}
-                  className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-all ${filter === k
+                  className={`px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all ${filter === k
                     ? 'bg-yellow-500 text-white shadow-md shadow-yellow-500/25'
                     : 'bg-white text-slate-600 hover:bg-yellow-50 hover:text-yellow-600 border border-slate-200'
                     }`}

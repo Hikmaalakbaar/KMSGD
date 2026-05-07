@@ -191,7 +191,7 @@ export default function DetailPengumuman() {
     <div className="pt-[4.69rem]">
 
       {/* ── HERO ── */}
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-yellow-700 to-yellow-900">
+      <section className="relative py-14 overflow-hidden sm:py-20 bg-gradient-to-br from-yellow-700 to-yellow-900">
         {item.gambar && (
           <>
             <div
@@ -213,7 +213,7 @@ export default function DetailPengumuman() {
             <span>/</span>
             <Link to="/pengumuman" className="no-underline transition-colors hover:text-white/80 text-white/50">Pengumuman</Link>
             <span>/</span>
-            <span className="text-white/70 truncate max-w-[200px]">{item.judul}</span>
+            <span className="text-white/70 truncate max-w-[120px] sm:max-w-[200px]">{item.judul}</span>
           </div>
 
           {/* Badge kategori */}
@@ -223,7 +223,7 @@ export default function DetailPengumuman() {
           </span>
 
           {/* Judul */}
-          <h1 className="mb-6 text-3xl font-extrabold leading-tight text-white font-display sm:text-4xl lg:text-5xl">
+          <h1 className="mb-6 text-2xl font-extrabold leading-tight text-white font-display sm:text-3xl md:text-4xl lg:text-5xl">
             {item.judul}
           </h1>
 
@@ -242,19 +242,19 @@ export default function DetailPengumuman() {
       {/* ── BODY ── */}
       <div className="bg-[#F1F5F9] py-12">
         <div className="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_300px] lg:gap-8">
 
             {/* ── Artikel utama ── */}
             <article className="overflow-hidden bg-white border shadow-sm rounded-2xl border-slate-200">
               {/* Ringkasan highlight */}
-              <div className="px-6 py-4 m-6 border-l-4 border-yellow-500 bg-yellow-50 rounded-r-xl">
+              <div className="px-4 py-3 m-4 border-l-4 border-yellow-500 sm:px-6 sm:py-4 sm:m-6 bg-yellow-50 rounded-r-xl">
                 <p className="text-sm italic leading-relaxed text-yellow-800">
                   {item.ringkasan}
                 </p>
               </div>
 
               {/* Konten */}
-              <div className="px-6 pb-8">
+              <div className="px-4 pb-6 sm:px-6 sm:pb-8">
                 {item.konten
                   ? renderKonten(item.konten)
                   : (
@@ -266,7 +266,7 @@ export default function DetailPengumuman() {
               </div>
 
               {/* Footer artikel */}
-              <div className="flex flex-col items-start justify-between gap-3 px-6 py-4 border-t border-slate-100 sm:flex-row sm:items-center">
+              <div className="flex flex-col items-start justify-between gap-3 px-4 py-3 border-t sm:px-6 sm:py-4 border-slate-100 sm:flex-row sm:items-center">
                 <button
                   onClick={() => navigate(-1)}
                   className="text-sm text-slate-400 hover:text-yellow-600 transition-colors cursor-pointer bg-transparent border-none p-0 flex items-center gap-1.5"

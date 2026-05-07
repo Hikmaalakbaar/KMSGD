@@ -44,7 +44,7 @@ export default function Navbar() {
             className="flex items-center gap-2.5 group"
             onClick={() => setOpen(false)}
           >
-            <div className="flex items-center justify-center w-12 h-12 overflow-hidden transition-transform bg-yellow-500 shadow-lg rounded-xl shadow-yellow-500/30 group-hover:scale-105">
+            <div className="flex items-center justify-center w-10 h-10 overflow-hidden transition-transform bg-yellow-500 shadow-lg sm:w-12 sm:h-12 rounded-xl shadow-yellow-500/30 group-hover:scale-105">
               <img
                 src="/logo.jpeg"
                 alt="logo"
@@ -53,11 +53,13 @@ export default function Navbar() {
             </div>
 
             <div className="leading-tight">
-              <p className="text-base font-bold font-display text-slate-800">
+              <p className="text-sm font-bold sm:text-base font-display text-slate-800">
                 KMSGD
               </p>
-              <p className="text-sm font-medium -mt-0.5 flex flex-col" style={{ color: "#A07C08" }}>
-                Keluarga Mahasiswa Sunan Gunung Djati <span className="text-xs">Jabodetabek</span>
+              <p className="text-xs font-medium sm:text-sm -mt-0.5 flex flex-col" style={{ color: "#A07C08" }}>
+                <span className="hidden min-[400px]:inline">Keluarga Mahasiswa Sunan Gunung Djati</span>
+                <span className="inline min-[400px]:hidden">KM Sunan Gunung Djati</span>
+                <span className="text-[10px] sm:text-xs">Jabodetabek</span>
               </p>
             </div>
           </Link>

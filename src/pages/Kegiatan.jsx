@@ -5,7 +5,7 @@ import { Clock, Tag } from 'lucide-react'
 export default function Kegiatan() {
   return (
     <div className="pt-[4.69rem]">
-      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-orange-500 to-orange-700">
+      <section className="relative py-14 overflow-hidden sm:py-20 bg-gradient-to-br from-orange-500 to-orange-700">
         <div
           className="absolute inset-0"
           style={{
@@ -23,7 +23,7 @@ export default function Kegiatan() {
             Program Asrama
           </span>
 
-          <h1 className="mb-4 text-4xl font-extrabold text-white font-display sm:text-5xl">
+          <h1 className="mb-4 text-3xl font-extrabold text-white font-display sm:text-4xl lg:text-5xl">
             Kegiatan & Program
           </h1>
 
@@ -33,7 +33,7 @@ export default function Kegiatan() {
         </div>
       </section>
 
-      <section className="py-20 bg-[#F1F5F9]">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#F1F5F9]">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <SectionHeader
             label="Semua Program"
@@ -53,7 +53,7 @@ export default function Kegiatan() {
                   <img
                     src={k.gambar}
                     alt={k.nama}
-                    className="object-cover w-full rounded-xl sm:w-56 h-44 shrink-0"
+                    className="object-cover w-full rounded-xl sm:w-56 h-44 sm:h-44 shrink-0"
                   />
 
                   <div className="flex-1">
