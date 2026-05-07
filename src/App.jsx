@@ -8,6 +8,7 @@ import Kegiatan from './pages/Kegiatan'
 import Pengumuman from './pages/Pengumuman'
 import Galeri from './pages/Galeri'
 import Kontak from './pages/Kontak'
+import DetailPengumuman from './pages/DetailPengumuman'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/pengumuman" element={<Pengumuman />} />
           <Route path="/galeri" element={<Galeri />} />
           <Route path="/kontak" element={<Kontak />} />
+          <Route path="/pengumuman/:id" element={<DetailPengumuman />} />
         </Routes>
       </main>
       <Footer />

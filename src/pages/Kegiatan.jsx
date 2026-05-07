@@ -5,7 +5,7 @@ import { Clock, Tag } from 'lucide-react'
 export default function Kegiatan() {
   return (
     <div className="pt-[4.69rem]">
-      <section className="bg-gradient-to-br from-orange-500 to-orange-700 py-20 relative overflow-hidden">
+      <section className="relative py-20 overflow-hidden bg-gradient-to-br from-orange-500 to-orange-700">
                 <div
           className="absolute inset-0"
           style={{
@@ -16,33 +16,33 @@ export default function Kegiatan() {
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <span className="inline-flex items-center gap-1.5 bg-white/15 text-white text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full mb-4">Program Asrama</span>
-          <h1 className="font-display font-extrabold text-white text-4xl sm:text-5xl mb-4">Kegiatan & Program</h1>
-          <p className="text-orange-100 max-w-xl mx-auto">Berbagai program yang dirancang untuk membentuk karakter dan kompetensi anggota secara menyeluruh</p>
+          <h1 className="mb-4 text-4xl font-extrabold text-white font-display sm:text-5xl">Kegiatan & Program</h1>
+          <p className="max-w-xl mx-auto text-orange-100">Berbagai program yang dirancang untuk membentuk karakter dan kompetensi anggota secara menyeluruh</p>
         </div>
       </section>
 
       <section className="py-20 bg-[#F1F5F9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <SectionHeader label="Semua Program" title="Program Kegiatan" subtitle="Pilih program yang sesuai dengan minat dan kebutuhanmu" />
           <div className="grid sm:grid-cols-2 gap-7">
             {kegiatan.map((k) => (
-              <div key={k.id} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:shadow-cobalt-500/10 transition-all duration-300 hover:-translate-y-1 flex gap-0">
-                <div className="w-2 bg-gradient-to-b from-cobalt-400 to-cobalt-600 shrink-0 rounded-l-2xl" />
-                <div className="p-6 flex-1">
+              <div key={k.id} className="flex gap-0 overflow-hidden transition-all duration-300 bg-white shadow-sm rounded-2xl hover:shadow-xl hover:shadow-yellow-500/10 hover:-translate-y-1">
+                <div className="w-2 bg-gradient-to-b from-yellow-400 to-yellow-600 shrink-0 rounded-l-2xl" />
+                <div className="flex-1 p-6">
                   <div className="flex items-start justify-between gap-4 mb-4">
                     <div className="text-4xl">{k.icon}</div>
-                    <div className="flex gap-2 flex-wrap justify-end">
-                      <span className="flex items-center gap-1 text-xs font-semibold text-cobalt-600 bg-cobalt-50 px-2.5 py-1 rounded-full">
+                    <div className="flex flex-wrap justify-end gap-2">
+                      <span className="flex items-center gap-1 text-xs font-semibold text-yellow-600 bg-yellow-50 px-2.5 py-1 rounded-full">
                         <Tag size={10} /> {k.kategori}
                       </span>
                     </div>
                   </div>
-                  <h3 className="font-display font-bold text-slate-800 text-xl mb-2">{k.nama}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">{k.deskripsi}</p>
-                  <div className="flex items-center gap-2 text-xs text-slate-400 bg-slate-50 px-3 py-2 rounded-lg w-fit">
-                    <Clock size={12} className="text-cobalt-400" /> {k.jadwal}
+                  <h3 className="mb-2 text-xl font-bold font-display text-slate-800">{k.nama}</h3>
+                  <p className="mb-4 text-sm leading-relaxed text-slate-500">{k.deskripsi}</p>
+                  <div className="flex items-center gap-2 px-3 py-2 text-xs rounded-lg text-slate-400 bg-slate-50 w-fit">
+                    <Clock size={12} className="text-yellow-400" /> {k.jadwal}
                   </div>
                 </div>
               </div>

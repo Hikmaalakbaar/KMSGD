@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { HiMapPin, HiPhone, HiEnvelope, HiClock, HiBuildingLibrary } from "react-icons/hi2"
 
 const LOCATION = {
   lat: -6.905977,
@@ -56,7 +57,7 @@ function LeafletMap() {
         .addTo(map)
         .bindPopup(`
           <div style="font-family:'DM Sans',sans-serif;min-width:180px;padding:4px 2px;">
-            <div style="font-weight:700;font-size:14px;color:#5C3317;margin-bottom:4px;">🕌 ${LOCATION.label}</div>
+            <div style="font-weight:700;font-size:14px;color:#5C3317;margin-bottom:4px;">🏫 ${LOCATION.label}</div>
             <div style="font-size:12px;color:#7A6E61;line-height:1.5;">${LOCATION.address}</div>
             <a href="https://www.google.com/maps/search/?api=1&query=${LOCATION.lat},${LOCATION.lng}"
               target="_blank" rel="noopener noreferrer"
@@ -156,7 +157,9 @@ export default function Maps() {
             boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
             display: "flex", gap: 14, alignItems: "flex-start",
           }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>📍</div>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0, color: "white" }}>
+              < HiMapPin />
+            </div>
             <div>
               <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 4 }}>Alamat</div>
               <div style={{ fontSize: 14, color: "#7A6E61", lineHeight: 1.6 }}>
@@ -174,7 +177,9 @@ export default function Maps() {
             boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
             display: "flex", gap: 14, alignItems: "flex-start",
           }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>📱</div>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0, color: "white" }}>
+              <HiPhone />
+            </div>
             <div>
               <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>WhatsApp</div>
               <a href={`https://wa.me/6281234567890`} style={{ fontSize: 14, color: "#C9973A", textDecoration: "none" }}>{LOCATION.phone}</a>
@@ -190,7 +195,9 @@ export default function Maps() {
             boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
             display: "flex", gap: 14, alignItems: "flex-start",
           }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>✉️</div>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0, color: "white" }}>
+              <HiEnvelope />
+            </div>
             <div>
               <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>Email</div>
               <a href={`mailto:${LOCATION.email}`} style={{ fontSize: 14, color: "#C9973A", textDecoration: "none" }}>{LOCATION.email}</a>
@@ -206,7 +213,9 @@ export default function Maps() {
             boxShadow: "0 2px 12px rgba(92,51,23,0.06)",
             display: "flex", gap: 14, alignItems: "flex-start",
           }}>
-            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0 }}>🕐</div>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#C8990A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20, flexShrink: 0, color: "white" }}>
+              <HiClock />
+            </div>
             <div>
               <div style={{ fontWeight: 600, fontSize: 14, color: "#1A1510", marginBottom: 2 }}>Jam Tamu</div>
               <div style={{ fontSize: 14, color: "#7A6E61", lineHeight: 1.6 }}>{LOCATION.hours}<br />{LOCATION.hours2}</div>

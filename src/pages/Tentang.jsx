@@ -70,7 +70,7 @@ export default function Tentang() {
                     key={i}
                     className="text-center p-4 bg-[#F1F5F9] rounded-xl"
                   >
-                    <p className="text-3xl font-extrabold font-display text-cobalt-500">
+                    <p className="text-3xl font-extrabold font-display text-[#C8990A]">
                       {item.value}
                     </p>
                     <p className="mt-1 text-sm text-slate-500">{item.label}</p>
