@@ -318,7 +318,7 @@ export const kegiatan = [
     deskripsi: 'Forum diskusi ilmiah setiap Kamis malam yang mengangkat tema-tema kontemporer dari perspektif akademik dan keagamaan.',
     jadwal: 'Setiap Kamis, 20.00 WIB',
     kategori: 'Rutin',
-    icon: '📚',
+    gambar: '../public/kajian.jpg',
   },
   {
     id: 2,
@@ -326,7 +326,7 @@ export const kegiatan = [
     deskripsi: 'Kegiatan olahraga bersama di lapangan asrama untuk menjaga kebugaran dan mempererat kebersamaan antar anggota.',
     jadwal: 'Setiap Minggu, 06.00 WIB',
     kategori: 'Rutin',
-    icon: '⚽',
+    gambar: '../public/olahraga.jpg',
   },
   {
     id: 3,
@@ -334,7 +334,7 @@ export const kegiatan = [
     deskripsi: 'Program tutor sebaya untuk membantu anggota yang membutuhkan pendampingan akademik di berbagai mata kuliah.',
     jadwal: 'Senin–Jumat, 19.00 WIB',
     kategori: 'Rutin',
-    icon: '🎓',
+    gambar: '../public/belajar.jpg',
   },
   {
     id: 4,
@@ -342,7 +342,7 @@ export const kegiatan = [
     deskripsi: 'Pelatihan tahunan untuk membentuk karakter pemimpin yang amanah, tangguh, dan berwawasan luas.',
     jadwal: 'Tahunan (Oktober)',
     kategori: 'Tahunan',
-    icon: '🏆',
+    gambar: '../public/pelatihan.jpg',
   },
 ]
 
